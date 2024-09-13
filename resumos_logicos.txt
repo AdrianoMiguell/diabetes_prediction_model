@@ -1,0 +1,15 @@
+Sim, você está correto. A interpretação da probabilidade pode ser um pouco confusa. O que está acontecendo é que a probabilidade result_prob representa a chance de o paciente ser diabético (classe 1), e não de ser não diabético.
+
+Quando você faz a previsão e obtém result_prob, está dizendo a probabilidade de a amostra pertencer à classe positiva (diabético). Portanto:
+
+Se result_prob é alto (próximo de 1), há uma alta probabilidade de o paciente ser diabético.
+Se result_prob é baixo (próximo de 0), há uma alta probabilidade de o paciente não ser diabético.
+Vamos revisar e ajustar o código para uma interpretação correta da probabilidade:
+
+Mensagem de Resultado Ajustada:
+A mensagem deve refletir a probabilidade de o paciente ser diabético ou não, de acordo com o resultado da previsão. 
+
+Explicações:
+result_prob*100 representa a probabilidade de ser diabético.
+(1 - result_prob)*100 representa a probabilidade de não ser diabético.
+Assim, a mensagem de resultado será mais clara e refletirá a probabilidade correta de ser ou não diabético.
